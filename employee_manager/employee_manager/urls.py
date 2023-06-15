@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from ..accounts.views import UserCreateView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('create_user/', UserCreateView.as_view(), name='register'),
 ]

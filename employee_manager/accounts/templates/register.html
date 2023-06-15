@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <body>
+    <header>
+      <nav >
+        <ul>
+          <li><a href='{% url "register" %}' class="btn btn--small btn--highlighted">Załóż konto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Załóż konto</h2>
+      <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+          <button class="btn" type="submit">Załóż konto</button>
+        </div>
+        </form>
+    </section>
+  </body>
+</html>
