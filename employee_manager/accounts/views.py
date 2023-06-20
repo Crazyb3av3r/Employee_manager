@@ -15,9 +15,8 @@ class UserCreateView(CreateView):
     """
 
     model = CustomUser
-    template_name = 'register'
+    template_name = 'register.html'
     form_class = UserAdminCreationForm
-    success_url = ...
     permission_required = None
 
     def form_valid(self, form):
@@ -28,3 +27,4 @@ class UserCreateView(CreateView):
         self.object.save()
         print(self.object)
         return response
+
