@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <body>
+    <section class="login-page">
+      <h2>Zaloguj się</h2>
+      <form method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="form-group form-group--buttons">
+          <button class="btn" type="submit">Dodaj</button>
+            <a href='{% url "register" %}' class="btn btn--without-border">Załóż konto</a>
+        </div>
+        </form>
+    </section>
+  </body>
+</html>
