@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 from accounts.views import UserCreateView, LoginView
+from manager.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', ),
+    path('', HomeView.as_view(), name='home'),
     path('create_user/', UserCreateView.as_view(), name='register'),
     path('login/', LoginView.as_view(), name='login')
 ]

@@ -35,7 +35,7 @@ class UserCreateView(CreateView):
 class LoginView(FormView):
 
     template_name = "login.html"
-    # success_url = reverse_lazy('home')
+    success_url = reverse_lazy('home')
     form_class = LoginForm
 
     def form_valid(self, form):
