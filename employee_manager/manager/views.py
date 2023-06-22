@@ -6,4 +6,4 @@ from django.shortcuts import render
 class HomeView(View):
 
     def get(self, request):
-        return render(request, 'home_page.html')
+        return render(request, 'base.html')
